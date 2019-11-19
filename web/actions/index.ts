@@ -1,0 +1,13 @@
+import { createAsyncAction, createAction } from 'typesafe-actions';
+import { Article, FetchedArticles } from '../model/article';
+import { IncomingMessage } from 'http';
+
+export const fetchArticlesAsync = createAsyncAction(
+  'FETCH_ARTICLES_REQUEST',
+  'FETCH_ARTICLES_SUCCESS',
+  'FETCH_ARTICLES_FAILURE'
+)<IncomingMessage | undefined, FetchedArticles, Error>();
+
+export const markAsRead = createAction('MARK_AS_READ')<string>();
+
+export const showArticles = createAction('SHOW_ARTICLES')<Article[]>();

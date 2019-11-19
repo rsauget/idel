@@ -1,0 +1,4 @@
+.envrc
+**/__pycache__
+public/*.json
+!public/locations.json
