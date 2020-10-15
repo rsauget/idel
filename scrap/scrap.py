@@ -10,10 +10,10 @@ from datetime import datetime
 from pprint import pprint
 from selenium import webdriver
 from splinter import Browser
-from .sites.ide_liberal import IdeLiberal
-from .sites.stethonet import Stethonet
-from .sites.annonces_medicales import AnnoncesMedicales
-from .sites.ordre_infirmiers import OrdreInfirmiers
+from sites.ide_liberal import IdeLiberal
+from sites.stethonet import Stethonet
+from sites.annonces_medicales import AnnoncesMedicales
+from sites.ordre_infirmiers import OrdreInfirmiers
 
 USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36"
 

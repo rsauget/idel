@@ -1,5 +1,5 @@
-const renderLinksWithPrefix = (prefix: string = '') => (links: string[]) => {
-  if (links != null && links.length > 0) {
+const renderLinksWithPrefix = (prefix: string = '') => (links: string[] | undefined) => {
+  if (links && links.length > 0) {
     if (links.length > 1) {
       return (
         <ul>

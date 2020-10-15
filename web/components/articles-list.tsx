@@ -44,9 +44,8 @@ export const ArticlesList: FunctionComponent<HTMLAttributes<HTMLDivElement>> = (
               {/* <td>{id}</td> */}
               <td>
                 <button
-                  className={`btn btn-${
-                    readArticles.has(article.id) ? 'danger' : 'success'
-                  }`}
+                  className={`btn btn-${readArticles.has(article.id) ? 'danger' : 'success'
+                    }`}
                   type="button"
                   onClick={() => markAsRead(article.id)}
                 >
@@ -80,7 +79,7 @@ export const ArticlesList: FunctionComponent<HTMLAttributes<HTMLDivElement>> = (
               </td>
               <td>{article.title || `Annonce n°${article.id}`}</td>
               <td>{moment(article.date).format('LLL')}</td>
-              <td>{article.location.formatted_address}</td>
+              <td>{article.location?.formatted_address ?? 'inconnu'}</td>
               <td>{renderEmail(article.email)}</td>
               <td>{renderPhone(article.phone)}</td>
               <td className="pre">

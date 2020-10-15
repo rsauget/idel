@@ -1,3 +1,4 @@
+import { scrapArticlesAsync } from './../actions/index';
 import { createReducer } from 'typesafe-actions';
 import { Article } from '../model/article';
 import { fetchArticlesAsync, markAsRead, showArticles } from '../actions';
@@ -17,6 +18,15 @@ export const defaultIdelState = {
 };
 
 export const rootReducer = createReducer(defaultIdelState)
+  .handleAction(
+    scrapArticlesAsync.success,
+    (
+      state: IdelState,
+      action: ReturnType<typeof scrapArticlesAsync.success>
+    ) => {
+      return state;
+    }
+  )
   .handleAction(
     fetchArticlesAsync.success,
     (

@@ -8,8 +8,9 @@ export interface Article {
   title: string;
   date: string;
   description: string;
-  location: google.maps.GeocoderResult;
-  phone: string[];
-  email: string[];
+  location?: google.maps.GeocoderResult;
+  rawLocation?: string;
+  phone?: string[];
+  email?: string[];
   source: string;
 }

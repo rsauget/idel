@@ -15,7 +15,7 @@ import '../index.scss';
 import { ArticlesList } from '../components/articles-list';
 import { NextJSContext } from 'next-redux-wrapper';
 import { IdelState } from '../reducers';
-import { fetchArticlesAsync } from '../actions';
+import { fetchArticlesAsync, scrapArticlesAsync } from '../actions';
 
 moment.locale('fr');
 
@@ -74,6 +74,7 @@ const App: NextPage = () => {
 App.getInitialProps = async (ctx: NextJSContext<IdelState>) => {
   const { store, req } = ctx;
   store.dispatch(fetchArticlesAsync.request(req));
+  store.dispatch(scrapArticlesAsync.request(req));
   return {};
 };
 

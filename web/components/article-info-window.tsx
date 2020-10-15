@@ -32,7 +32,7 @@ export const ArticleInfoWindow: FunctionComponent<ArticleInfoWindowProps> = prop
 
   const markAsRead = (id: string) => dispatch(actions.markAsRead(id));
 
-  if (!activeArticles || activeArticles.length === 0) {
+  if (!activeArticles || activeArticles.length === 0 || !activeArticles[0].location) {
     return null;
   }
 

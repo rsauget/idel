@@ -20,7 +20,7 @@ export const ArticleInfo: FunctionComponent<ArticleInfoProps> = (props) => {
     <div>
       <h2>{article.title || `Annonce n°${article.id}`}</h2>
       <p>
-        Lieu : {article.location.formatted_address}
+        Lieu : {article.location?.formatted_address ?? 'inconnu'}
         {directions &&
           directions.routes &&
           directions.routes.length > 0 &&
